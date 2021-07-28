@@ -1,0 +1,35 @@
+{
+  "name": "octabot",
+  "version": "0.0.4",
+  "private": true,
+  "description": "Helping Octanians!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "authors": [
+    "Aun"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": ">=0.18.1",
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.17.1",
+    "tsscmp": "^1.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aunrf/OctaBot-v0.0.4.git"
+  },
+  "author": "Aun",
+  "bugs": {
+    "url": "https://github.com/aunrf/OctaBot-v0.0.4/issues"
+  },
+  "homepage": "https://github.com/aunrf/OctaBot-v0.0.4#readme"
+}
