@@ -86,7 +86,7 @@ module.exports = {
                     type: "divider"
 		},
 		{
-            block_id: "type",
+            block_id: "leavetype",
 			type: "input",
 			element: {
 				type: "static_select",
@@ -121,7 +121,7 @@ module.exports = {
 						value: "value-2"
 					}
 				],
-				action_id: "type_id"
+				action_id: "leavetype_id"
 			},
 			label: {
 				type: "plain_text",
@@ -244,7 +244,7 @@ module.exports = {
                         type: 'section',
                         text: {
                             type: 'mrkdwn',
-                            text: context.leave.type
+                            text: context.leave.leavetype
                         }
                     },
                     {
@@ -285,7 +285,7 @@ module.exports = {
                         type: 'section',
                         text: {
                             type: 'mrkdwn',
-                            text: `<@${context.leave.approverString}>`
+                            text: `<@${context.leave.approver}>`
                         }
                     },
                     {
@@ -379,7 +379,7 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `>>> *Type*\n${context.type}\n\n*Date from*\n${context.from}n*Date to*\n${context.to}`
+                        text: `>>> *Type*\n${context.leavetype}\n\n*Date from*\n${context.from}n*Date to*\n${context.to}`
                     }
                 },
                 {
@@ -440,7 +440,7 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `>>> *Type*\n${context.type}\n\n*Date from*\n${context.from}n*Date to*\n${context.to}`
+                        text: `>>> *Type*\n${context.leavetype}\n\n*Date from*\n${context.from}n*Date to*\n${context.to}`
                     }
                 },
                 {
@@ -464,7 +464,7 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `*${context.type}*`
+                        text: `*${context.leavetype}*`
                     }
                 },
                 {
