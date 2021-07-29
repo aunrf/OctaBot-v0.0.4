@@ -65,8 +65,10 @@ const rejectLeave = async (payload, leave) => {
   })
   await callAPIMethodPost('chat.postMessage', payloads.rejected({
     channel: res.channel.id,
-    title: leave.title,
-    details: leave.details,
+    type: leave.type,
+    from: leave.from,
+    to: leave.to,
+    reason: leave.reason,
     channelString: leave.channelString
   }));
 }
@@ -82,8 +84,10 @@ const postLeave = async (payload, leave) => {
   leave.channels.forEach(channel => {
     callAPIMethodPost('chat.postMessage', payloads.leave({
       channel: channel,
-      title: leave.title,
-      details: leave.details,
+      type: leave.type,
+      from: leave.from,
+      to: leave.to,
+      reason: leave.reason,
       requester: leave.requester,
       approver: leave.approver
     }));
