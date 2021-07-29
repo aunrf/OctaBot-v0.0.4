@@ -172,9 +172,11 @@ const handleViewSubmission = async (payload, res) => {
 
       // respond with a stacked modal to the user to confirm selection
       let leave = {
-        title: values.title.title_id.value,
-        details: values.details.details_id.value,
+        type: values.type.type_id.value,
+        from: values.from.from_id.value,
+        to: values.to.to_id.value,
         approver: values.approver.approver_id.selected_user,
+        reason: values.reason.reason_id.value,
         channels: channels,
         channelString: channelString
       }
