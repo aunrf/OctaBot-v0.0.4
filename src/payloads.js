@@ -121,7 +121,7 @@ module.exports = {
 						value: "value-2"
 					}
 				],
-				action_id: "static_select-action"
+				action_id: "type_id"
 			},
 			label: {
 				type: "plain_text",
@@ -140,7 +140,7 @@ module.exports = {
 					text: "Select a date",
 					emoji: true
 				},
-				action_id: "datepicker-action"
+				action_id: "from_id"
 			},
 			label: {
 				type: "plain_text",
@@ -159,7 +159,7 @@ module.exports = {
 					text: "Select a date",
 					emoji: true
 				},
-				action_id: "datepicker-action"
+				action_id: "to_id"
 			},
 			label: {
 				type: "plain_text",
@@ -177,7 +177,7 @@ module.exports = {
 					text: "Please select your head of department and HR",
 					emoji: true
 				},
-				action_id: "multi_users_select-action"
+				action_id: "approver_id"
 			},
 			label: {
 				type: "plain_text",
@@ -207,6 +207,7 @@ module.exports = {
 				emoji: true
 			},
 			element: {
+                action_id: "reason_id",
 				type: "plain_text_input",
 				multiline: true
 			}
@@ -378,7 +379,7 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `>>> *TITLE*\n${context.title}\n\n*DETAILS*\n${context.details}`
+                        text: `>>> *Type*\n${context.type}\n\n*Date from*\n${context.from}n*Date to*\n${context.to}`
                     }
                 },
                 {
@@ -439,7 +440,7 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `>>> *TITLE*\n${context.title}\n\n*DETAILS*\n${context.details}`
+                        text: `>>> *Type*\n${context.type}\n\n*Date from*\n${context.from}n*Date to*\n${context.to}`
                     }
                 },
                 {
@@ -463,7 +464,7 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: `*${context.title}*`
+                        text: `*${context.type}*`
                     }
                 },
                 {
@@ -473,7 +474,17 @@ module.exports = {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: context.details
+                        text: context.from
+                    }
+                },
+                {
+                    type: 'divider'
+                },
+                {
+                    type: 'section',
+                    text: {
+                        type: 'mrkdwn',
+                        text: context.to
                     }
                 },
                 {
